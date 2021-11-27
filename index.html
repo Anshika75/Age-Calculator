@@ -1,0 +1,526 @@
+<!-----PLEASE PLEASE PLEASE.----->
+<!-------READ THESE LINES-------->
+
+<!-----I am very new to coding so this code may appear boring ---->
+<!------This is very simple --->
+<!-----No. of days i commited to this code = 3----->
+<!----My only aim to create this is self improvement---->
+<!----So please help me in my journey of self improvement by writing your opinions in comments---->
+<!----I am not afraid to face rude comments but yeah i want you all to be truthful please--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Users\Anshika Thakur\Desktop\js\converters\age.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Graduate&family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;    
+    background: linear-gradient(130deg, #e5f4f7 50%, #00dfc0 50%);
+}
+.page img{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+.page .head{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width:100%;
+    text-align:center;
+}
+.page .head p{
+    font-weight: 700;
+    color: #00dfbf;
+    letter-spacing: 1.5px;
+}
+.page .head h1{
+    color: #007d6b;
+    font-weight: 900;
+}
+.page .head button{
+    padding: 15px;
+    background-color: #007d6b;
+    color: #ececec;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border-radius: 2px;
+    border: 2px solid #ececec;
+    box-shadow: 2.5px 2.5px 10px 2.5px #2222;
+}
+.page .head button:hover{
+    color: #005244;
+    background-color: #ececec;
+    border: 2px solid #007d6b;
+}
+.page2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(0% at 0 100%);
+    background: linear-gradient(0deg, #e5f4f7 70%, #00dfc0 70%);
+    transition: all 1s ease-in-out;
+}
+.page2 .head{
+    width:90vw;
+}
+.page2 .head{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.page2 .head p{
+    color: #ececec;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+.page2 .calculations{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    font-family: 'Poppins', sans-serif;
+}
+.page2 .calculations .inputfield{
+    display: flex;
+    flex-direction: column;
+}
+.page2 .calculations .inputfield .field{
+    display: flex;
+    flex-direction: row;
+}
+.page2 .calculations .inputfield .field b{
+    color: #005244;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-right: 15px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    font-family: 'Graduate', cursive;
+    font-weight: 700;
+}
+.page2 .calculations .inputfield .field input{
+    outline: none;
+    border: none;
+    background-color: #aefff4;
+    border-radius: 5px;
+    height: 35px;
+    width: 75px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Graduate', cursive;
+    font-weight: 700;
+    color: #005244;
+}
+.page2 .calculations .inputfield .field input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.page2 .calculations .inputfield .field input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.page2 .calculations .inputfield .field input[type=number]{
+    -moz-appearance: textfield;
+}
+.page2 .calculations .inputfield button{
+    padding: 10px;
+    background-color: #007d6b;
+    color: #ececec;
+    font-family: 'Graduate', cursive;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px 10px 2.5px #2222;
+}
+.page2 .calculations .inputfield button:hover{
+    color: #005244;
+    background-color: #ececec;
+    border: 2px solid #007d6b;
+}
+table.table{
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border: 2px solid #007d6b;
+    color: #000000;
+    margin-top: 45px;    
+}
+table.table td, table.table th{
+    border: 2px solid #007d6b;
+}
+table.table thead{
+    background-color: #007d6b;
+    color: #ececec;
+    font-family: 'Graduate', cursive;
+    font-weight: 700;
+}
+table.table thead tr th{
+    padding: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+table.table td p{
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    font-family: 'Graduate', cursive;
+    font-weight: 700;
+    color: #005244;
+    font-size: .8rem;
+    max-width:80px;
+    overflow:scroll;
+}
+.page2 .calculations .err{
+    margin-top: 30px;
+}
+.page2 .calculations .err p{
+    font-weight: 900;
+    color: #d00036;
+    letter-spacing: 2px;
+}
+.hide{
+    display: none;
+}
+.main{
+    height:100%;
+    width:100vw;
+    position:fixed;
+    overflow:hidden;
+    top: 0;
+    left: 0;
+    background-color:rgb(1, 0, 15);
+    z-index: 50;
+}
+.lbox{
+    height:300px;
+    width:300px;
+    padding:30px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.3);
+    transform-style:preserve-3d;
+    position:absolute;
+    z-index:100;
+}
+.lbox .box{
+    height:250px;
+    width:250px;
+    background-color:transparent;
+    padding:30px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transform-style:preserve-3d;
+    position:absolute;
+}
+.lbox .box2{
+    transform:translate(-50%,-50%) rotate(30deg);
+}
+.lbox .box3{
+    transform:translate(-50%,-50%) rotate(-45deg);
+}
+.lbox .box4{
+    transform:translate(-50%,-50%) rotate(60deg);
+}
+.lbox .box5{
+    transform:translate(-50%,-50%) rotate(-75deg);
+}
+.lbox .box6{
+    transform:translate(-50%,-50%) rotate(105deg);
+}
+.lbox .box7{
+    transform:translate(-50%,-50%) rotate(-120deg);
+}
+.lbox .box8{
+    transform:translate(-50%,-50%) rotate(135deg);
+}
+.lbox .box9{
+    transform:translate(-50%,-50%) rotate(-150deg);
+}
+.lbox .box10{
+    transform:translate(-50%,-50%) rotate(165deg);
+}
+.lbox .b1{
+    height:100%;
+    width:100%;
+    border:2px solid transparent;
+    animation:r1 7s linear both infinite;
+    transform:perspective(1000px) translateZ(100%) rotate(-360deg);
+}
+@keyframes r1{
+    0%{
+        transform:perspective(1000px) rotateX(0deg) rotate(-360deg);
+    }
+    
+    100%{
+        transform:perspective(1000px) rotateX(360deg) rotate(360deg);
+    }
+}
+.lbox .b{
+    border-image:linear-gradient(45deg, #00dfc0, #007d6a, #40e6cf, #00a88f, #abfcf5);
+    border-image-slice:1;
+}
+@media (min-width:1200px){
+    .page{
+    background: linear-gradient(130deg, #e5f4f7 65%, #00dfc0 65%);
+    }
+    .page1 img{
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        bottom: 50px;
+        right: 60px;
+    }
+    .page1 .head{
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+    .page1 .head p{
+        letter-spacing: 2.5px;
+        font-size: 1.5rem;
+    }
+    .page1 .head h1{
+        font-size: 3.5rem;
+        letter-spacing: 2.5px;
+    }
+    .page1 .head button{
+        padding: 20px;
+        font-size: 1.5rem;
+        letter-spacing: 2.5px;
+        margin-top: 100px;
+        transition: all .5s ease-in-out;
+        border-radius: 5px;
+    }
+    .page2{
+    background: linear-gradient(0deg, #e5f4f7 65%, #00dfc0 65%);
+    }
+    .page2 .head h1{
+        margin-top: 10px;
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+    .page2 .head p{
+        margin-top: 10px;
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+    }
+    .page2 .calculations .inputfield{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .page2 .calculations .inputfield button{
+        margin-top: 0px;
+        margin-left: 65px;
+        font-size: 1.2rem;
+        padding: 7px;
+    }
+    .page2 .calculations .inputfield .field b{
+        font-size: 2rem;
+        height: 55px;
+        margin-right: 10px;
+    }
+    .page2 .calculations .inputfield .field input{
+        font-size: 1.5rem;
+        height: 55px;
+        width: 120px;
+        text-align: center;
+    }
+    table.table{
+        border: 5px solid #007d6b;
+        margin-top: 50px;
+    }
+    table.table td, table.table th{
+        border: 5px solid #007d6b;
+    }
+    table.table thead tr th{
+        padding: 25px;
+        letter-spacing: 3px;
+        font-size: 1rem;
+    }
+    .page2 .calculations .err{
+        margin-top: 30px;
+    }
+    .page2 .calculations .err p{
+        font-weight: 900;
+        color: #d00036;
+        letter-spacing: 2px;
+    }
+    table.table td p{
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+}
+</style>
+    <div class="page page1" id="p1">
+        <div class="head">
+            <p>Maggi Creation Presents</p>
+            <h1>Age Calculator</h1>
+            <button onclick="np()">Calculate Now</button>
+        </div>
+        <img src="https://www.dropbox.com/s/7ru0mynkccptm3j/1625499267134.png?dl=1" alt="">
+    </div>
+    <div class="page page2" id="p2">
+        <div class="head">
+            <h1>Age Calculator</h1>
+            <p><i class="fas fa-quote-left"></i> The best tunes are played on the oldest fiddles! <i class="fas fa-quote-right"></i></p>
+        </div>
+        <div class="calculations">
+            <div class="inputfield">
+                <div class="field">
+                    <b>Age:</b> 
+                    <input type="number" id="age" pattern="[0-9]+">
+                </div> 
+            
+            <button onclick="cal()">Let's Work Out</button>
+            </div>
+            <table class="table">
+              <thead>
+                    <tr>
+                      <th>Days</th>
+                      <th>Hours</th>
+                      <th>Minutes</th>
+                      <th>Seconds</th>
+                    </tr>
+              </thead>
+              <tbody>
+                    <tr>
+                      <td><p id="d"></p></td>
+                      <td><p id="h"></p></td>
+                      <td><p id="m"></p></td>
+                      <td><p id="s"></p></td>
+                    </tr>
+              </tbody>
+            </table>
+            <div class="err hide" id="er"><p>Please enter a valid age</p></div>
+        </div>
+    </div>
+    <div class="main" id="loader">
+        <div class="lbox">
+            <div class="box">
+                <div class="b b1 b11"></div>
+            </div>
+            <div class="box box2">
+                <div class="b b1 b12"></div>
+            </div>
+            <div class="box box3">
+                <div class="b b1 b13"></div>
+            </div>
+            <div class="box box4">
+                <div class="b b1 b14"></div>
+            </div>
+            <div class="box box5">
+                <div class="b b1 b15"></div>
+            </div>
+            <div class="box box6">
+                <div class="b b1 b16"></div>
+            </div>
+            <div class="box box7">
+                <div class="b b1 b17"></div>
+            </div>
+            <div class="box box8">
+                <div class="b b1 b18"></div>
+            </div>
+            <div class="box box9">
+                <div class="b b1 b19"></div>
+            </div>
+            <div class="box box10">
+                <div class="b b1 b120"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loader = document.getElementById("loader");
+        window.onload = function(){
+            setTimeout(() => {
+                loader.style.display="none";
+            }, 300);
+        }
+        
+        var p1 = document.getElementById('p1');
+        var p2 = document.getElementById('p2');
+        var sim = 60;
+        var mih = 60;
+        var hid = 24;
+        var diy = 364.25;
+        
+        var er = document.getElementById('er');
+        var d = document.getElementById('d');
+        var h = document.getElementById('h');
+        var m = document.getElementById('m');
+        var s = document.getElementById('s');
+        function np(){
+            p2.style.clipPath="circle(100% at 50% 50%)";
+        }
+        function cal(){           
+            age = document.getElementById('age').value;
+            if(age == '' || age < 0){
+                er.classList.remove("hide");
+                d.innerHTML = '';
+                h.innerHTML = '';
+                m.innerHTML = '';
+                s.innerHTML = '';
+            }else{
+                er.classList.add("hide");
+                var dd = age * diy;
+                d.innerHTML = dd;
+                var hh = age * hid * diy;
+                h.innerHTML = hh;
+                var mm = age * mih * hid * diy;
+                m.innerHTML = mm;
+                var ss = age * sim * mih * hid * diy;
+                s.innerHTML = ss;
+            }
+            
+        }    
+        // 
+    </script>
+</body>
+</html>
